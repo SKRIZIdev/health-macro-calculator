@@ -41,3 +41,17 @@ input:focus,select:focus{outline:2px solid var(--accent);outline-offset:-1px}
 .warn{color:#fbbf24!important;font-size:.85rem}
 .foot{text-align:center;color:var(--muted);padding:28px;font-size:.85rem;border-top:1px solid var(--line)}
 @media(max-width:640px){.cols{grid-template-columns:1fr}.title{font-size:1.6rem}}
+
+/* ---- enhancements: BMI scale, animations ---- */
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.title,.sub,.cols{opacity:0;animation:riseIn .55s cubic-bezier(.2,.8,.3,1) both}
+.sub{animation-delay:.06s}.cols{animation-delay:.12s}
+.cols .card{transition:transform .2s}.cols .card:hover{transform:translateY(-3px)}
+input:focus,select:focus{box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.seg button{transition:background .2s}
+.bmi-scale{position:relative;height:10px;border-radius:6px;margin-top:12px;
+  background:linear-gradient(90deg,#60a5fa 0 14%,#34d399 14% 40%,#fbbf24 40% 60%,#f87171 60% 100%)}
+.bmi-marker{position:absolute;top:-4px;width:4px;height:18px;background:var(--txt);border-radius:3px;box-shadow:0 0 0 2px var(--panel);transition:left .5s cubic-bezier(.2,.9,.3,1);left:40%}
+.bar{transition:none}
+.macro b{transition:color .2s}
+button{transition:transform .1s}
