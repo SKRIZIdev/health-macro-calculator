@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Calculator — BMI & daily calories</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">💪 FitCalc</a>
+  <nav>
+    <a href="index.html" class="active">Calories</a>
+    <a href="macros.html">Macros</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<main class="wrap">
+  <h1 class="title">Calories & BMI</h1>
+  <p class="sub">Estimate your daily energy needs using the Mifflin-St Jeor equation.</p>
+  <div class="cols">
+    <section class="card">
+      <div class="seg" id="sex"><button class="on" data-v="m">Male</button><button data-v="f">Female</button></div>
+      <label>Age <input id="age" type="number" value="30"></label>
+      <div class="two">
+        <label>Height (cm) <input id="height" type="number" value="178"></label>
+        <label>Weight (kg) <input id="weight" type="number" value="76"></label>
+      </div>
+      <label>Activity
+        <select id="activity">
+          <option value="1.2">Sedentary (little exercise)</option>
+          <option value="1.375">Light (1–3 days/wk)</option>
+          <option value="1.55" selected>Moderate (3–5 days/wk)</option>
+          <option value="1.725">Active (6–7 days/wk)</option>
+          <option value="1.9">Very active (physical job)</option>
+        </select>
+      </label>
+    </section>
+    <section class="card result">
+      <div class="big"><span>Maintenance calories</span><strong id="tdee">0</strong><small>kcal / day</small></div>
+      <div class="row"><span>Mild loss (−0.25 kg/wk)</span><b id="loss">0</b></div>
+      <div class="row"><span>Mild gain (+0.25 kg/wk)</span><b id="gain">0</b></div>
+      <div class="row"><span>BMR (at rest)</span><b id="bmr">0</b></div>
+      <div class="bmi"><span>BMI</span><b id="bmi">0</b><em id="bmiCat">—</em></div>
+    </section>
+  </div>
+</main>
+<footer class="foot">FitCalc · educational, not medical advice · SKRIZIdev</footer>
+<script src="js/calc.js"></script>
+</body>
+</html>

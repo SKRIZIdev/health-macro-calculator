@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macros — FitCalc</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">💪 FitCalc</a>
+  <nav>
+    <a href="index.html">Calories</a>
+    <a href="macros.html" class="active">Macros</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<main class="wrap">
+  <h1 class="title">Macro split</h1>
+  <p class="sub">Turn a daily calorie target into protein, carbs and fat.</p>
+  <div class="cols">
+    <section class="card">
+      <label>Daily calories <div class="ip"><input id="cals" type="number" value="2200"><span>kcal</span></div></label>
+      <label>Split
+        <select id="split">
+          <option value="30,40,30">Balanced (30 / 40 / 30)</option>
+          <option value="40,30,30">High protein (40 / 30 / 30)</option>
+          <option value="30,50,20">High carb (30 / 50 / 20)</option>
+          <option value="35,25,40">Low carb (35 / 25 / 40)</option>
+        </select>
+      </label>
+    </section>
+    <section class="card">
+      <div class="macro p"><span>Protein</span><b id="protein">0 g</b><small id="pc">0%</small></div>
+      <div class="macro c"><span>Carbs</span><b id="carbs">0 g</b><small id="cc">0%</small></div>
+      <div class="macro f"><span>Fat</span><b id="fat">0 g</b><small id="fc">0%</small></div>
+      <div class="bar" id="bar"></div>
+    </section>
+  </div>
+</main>
+<footer class="foot">FitCalc · educational, not medical advice · SKRIZIdev</footer>
+<script src="js/macros.js"></script>
+</body>
+</html>
